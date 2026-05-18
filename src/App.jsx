@@ -5,7 +5,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Map from "./pages/Map";
 import WhyChoose from "./pages/WhyChoose";
-import WhatsAppBtn from "./pages/WhatsAppBtn";
+// import WhatsAppBtn from "./pages/WhatsAppBtn";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
       <About />
       <Services />
       <WhyChoose/>
-      <WhatsAppBtn/>
+      {/* <WhatsAppBtn/> */}
       <Contact />
       <Map/>
       <Footer />
