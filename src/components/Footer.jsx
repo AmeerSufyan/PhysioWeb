@@ -4,7 +4,7 @@ export default function Footer() {
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
     
     <div className="text-sm md:text-base text-gray-800">
-      © 2026 Dr. Munish Kumar Physiotherapy Clinic
+      © 2026 Dr. Munaish Kumar Physiotherapy Clinic
     </div>
 
     <div className="text-sm md:text-base text-white font-medium">

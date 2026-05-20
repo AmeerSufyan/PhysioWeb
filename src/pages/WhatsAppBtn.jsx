@@ -1,11 +1,24 @@
-// export default function WhatsAppBtn() {
-//   return (
-//     <a
-//       href="https://wa.me/923000000000"
-//       target="_blank"
-//       className="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg"
-//     >
-//       WhatsApp
-//     </a>
-//   );
-// }
+export default function WhatsAppBtn() {
+  return (
+    <a
+      href="https://wa.me/+923328214183"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-5 right-5 bg-green-500 text-white p-2 rounded-full shadow-lg z-50
+                 flex items-center justify-center
+                 hover:bg-green-600 transition duration-300
+                 animate-bounce"
+    >
+      {/* WhatsApp Icon */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        fill="currentColor"
+        className="w-8 h-8"
+      >
+        <path d="M19.11 17.47c-.28-.14-1.64-.81-1.9-.9-.26-.09-.45-.14-.64.14-.19.28-.74.9-.91 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.66-1.55-1.94-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.46.09-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.12-.23-.56-.47-.48-.64-.49h-.55c-.19 0-.49.07-.74.35-.26.28-1 1-.97 2.44.02 1.44 1.02 2.84 1.16 3.03.14.19 2.01 3.07 4.87 4.3.68.29 1.21.46 1.63.59.68.22 1.3.19 1.79.12.55-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z" />
+        <path d="M16.02 3C9.4 3 4.02 8.38 4.02 15c0 2.12.55 4.11 1.52 5.84L4 29l8.4-1.49A11.93 11.93 0 0016.02 27C22.64 27 28.02 21.62 28.02 15S22.64 3 16.02 3zm0 21.8c-1.83 0-3.53-.5-5-1.37l-.36-.21-4.99.88.91-4.86-.23-.39A9.78 9.78 0 016.22 15c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8z" />
+      </svg>
+    </a>
+  );
+}

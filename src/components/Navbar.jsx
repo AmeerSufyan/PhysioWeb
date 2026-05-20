@@ -18,8 +18,8 @@ export default function Navbar() {
       <div className="flex items-center justify-between px-6 py-4">
         
         {/* Logo */}
-        <h1 className="text-xl font-bold text-blue-700">
-          Dr. Munish Kumar
+        <h1 className="text-xl font-bold text-black-700">
+          Dr Munaish Kumar
         </h1>
 
         {/* Desktop Menu */}
@@ -64,7 +64,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden flex flex-col items-center gap-4 pb-4 text-white font-medium bg-blue-400">
+        <div className="md:hidden flex flex-col items-center gap-4 pb-4 text-white font-medium bg-blue-250">
           
           <p
             onClick={() => scrollTo("home")}
