@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const services = [
   {
     title: "Back Pain Treatment",
@@ -20,23 +22,47 @@ const services = [
     img: "./images/manual-therapy.jpg",
   },
   {
-    title: "Dry Needling",
+    title: "Neuro Rehabilitation",
     img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
+  },
+
+  // Add more services here
+  {
+    title: "Ortho Rehabilitation",
+    img: "./images/neck-pain.jpg",
+  },
+  {
+    title: "Cardio Pulmonery Rehabilitation",
+    img: "./images/joint.jpg",
+  },
+  {
+    title: "Peadiatric Rehabilitation",
+    img: "./images/posture.jpg",
+  },
+   {
+    title: "Amputation Rehabilitation",
+    img: "./images/posture.jpg",
   },
 ];
 
 export default function Services() {
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedServices = showAll
+    ? services
+    : services.slice(0, 6);
+
   return (
-    <section id="services" className="py-4  text-center">
-      <h2 className="text-4xl font-bold mb-12 text-gray-800">
+    <section id="services" className="py-4 text-center">
+      <h2 className="text-3xl font-bold mb-12 text-gray-800">
         Our Services
       </h2>
 
       <div className="grid md:grid-cols-3 gap-8 px-6 md:px-6">
-        {services.map((s, i) => (
+        {displayedServices.map((s, i) => (
           <div
             key={i}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 hover:-translate-y-2"
+            className="bg-white rounded-2xl shadow-lg overflow-hidden  transition duration-300 hover:-translate-y-2"
           >
             {/* Image */}
             <div className="h-48 overflow-hidden">
@@ -49,13 +75,24 @@ export default function Services() {
 
             {/* Content */}
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-lg font-semibold text-gray-800">
                 {s.title}
               </h3>
             </div>
           </div>
         ))}
       </div>
+
+      {services.length > 6 && (
+        <div className="mt-8">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-6 py-2 border border-gray-400 rounded-lg transition  bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-sm"
+          >
+            {showAll ? "Show Less" : "See All"}
+          </button>
+        </div>
+      )}
     </section>
   );
 }

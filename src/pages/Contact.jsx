@@ -1,57 +1,72 @@
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock, Home, CheckCircle } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="py-24  relative flex justify-center"
-    >
-      {/* Background */}
-      <div className="absolute top-0 left-0 w-full h-1/2 "></div>
+    <section id="contact" className="my-24  text-white bg-gradient-to-br from-teal-500 to-cyan-600">
 
       {/* Contact Card */}
-      <div className="relative z-10 bg-blue-50 shadow-2xl rounded-2xl p-10 w-full max-w-6xl -mt-24">
+      <div className=" z-10  shadow-sm  px-6 py-10 -mt-24 ">
 
-        <h2 className="text-4xl font-bold mb-10 text-center text-gray-800">
+        <h2 className="text-3xl font-bold mb-10 text-center ">
           Book Appointment
         </h2>
 
-        {/* Responsive layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-white rounded-2xl p-6 border border-gray-100
+                shadow-[0_0_30px_rgba(0,0,0,0.12)]
+                transition-all duration-300">
 
-          {/* Phone */}
-          <div className="flex flex-col items-center text-center gap-3">
-            <div className="bg-green-100 p-4 rounded-full">
-              <Phone className="text-green-600 w-6 h-6" />
+          {/* Phone*/}
+          <a
+            href="tel:+923328214183"
+            className="flex flex-col items-center text-center gap-3 hover:scale-105 transition"
+          >
+            <div className="bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-sm p-3 rounded-full">
+              <Phone className=" w-6 h-6" />
             </div>
             <p className="text-sm text-gray-500">Phone</p>
             <p className="font-semibold text-gray-800">+923328214183</p>
-          </div>
+          </a>
 
-          {/* Address */}
-          <div className="flex flex-col items-center text-center gap-3">
-            <div className="bg-blue-100 p-4 rounded-full">
-              <MapPin className="text-blue-600 w-6 h-6" />
+          {/* Address  */}
+          <a
+            href="https://www.google.com/maps?q=Railway+General+Hospital+Dhok+Hassu+Rawalpindi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center text-center gap-3 hover:scale-105 transition"
+          >
+            <div className="bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-sm p-3 rounded-full rounded-full">
+              <MapPin className="w-6 h-6" />
             </div>
             <p className="text-sm text-gray-500">Address</p>
             <p className="font-semibold text-gray-800">
               Railway General Hospital, Dhok Hassu, Rawalpindi
             </p>
-          </div>
+          </a>
 
           {/* Timing */}
-          <div className="flex flex-col items-center text-center gap-3">
-            <div className="bg-yellow-100 p-4 rounded-full">
-              <Clock className="text-yellow-600 w-6 h-6" />
+          <div className="flex flex-col items-center text-center gap-3 hover:scale-105 transition">
+
+            <div className="bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-sm p-3 rounded-full p-4 rounded-full">
+              <Clock className="w-6 h-6" />
             </div>
+
             <p className="text-sm text-gray-500">Timing</p>
+
             <p className="font-semibold text-gray-800">
-              10:00 am - 4:00 pm
+              8:00 am - 5:00 pm
             </p>
+
+            {/* Highlight Badge */}
+            <span className="mt-1 px-3 py-1 text-xs font-semibold bg-gradient-to-br from-teal-500 to-cyan-600 text-white  rounded-full shadow-sm">
+              Sunday Closed
+            </span>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
   );
 }
