@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const services = [
   {
@@ -48,12 +48,20 @@ const services = [
 export default function Services() {
   const [showAll, setShowAll] = useState(false);
 
+  // Preload all service images quietly in the background
+  useEffect(() => {
+    services.forEach((s) => {
+      const img = new Image();
+      img.src = s.img;
+    });
+  }, []);
+
   const displayedServices = showAll
     ? services
     : services.slice(0, 6);
 
   return (
-    <section id="services" className="py-4 text-center">
+    <section id="services" className="text-center">
       <h2 className="text-3xl font-bold mb-12 text-gray-800">
         Our Services
       </h2>
@@ -69,6 +77,7 @@ export default function Services() {
               <img
                 src={s.img}
                 alt={s.title}
+                loading="lazy"
                 className="w-full h-full object-cover hover:scale-110 transition duration-500"
               />
             </div>

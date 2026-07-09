@@ -2,9 +2,9 @@ import { ShieldCheck, Cpu, TrendingUp } from "lucide-react";
 
 export default function WhyChoose() {
   return (
-    <section className="py-24  flex justify-center px-6">
+    <section className="py-16 flex justify-center px-6">
       
-      <div className="grid gap-8   rounded-2xl">
+      <div className="grid gap-6   rounded-2xl">
 
         {/* Heading */}
         <h2 className="text-3xl font-bold text-center text-gray-800 ">
@@ -20,7 +20,7 @@ export default function WhyChoose() {
         <div className="grid md:grid-cols-3  gap-8  ">
 
           {/* Advanced Physiotherapy */}
-          <div className="shadow-xl rounded-2xl p-4 bg-white hover:scale-105 transition">
+          <div className="shadow-lg rounded-2xl p-4 bg-white hover:scale-105 transition">
             <Cpu className="w-11 h-11 bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-sm p-1 rounded-xl " />
             <div>
               <h3 className="font-semibold text-gray-800">
@@ -33,7 +33,7 @@ export default function WhyChoose() {
           </div>
 
           {/* Qualified Staff */}
-          <div className="shadow-xl rounded-2xl p-4 bg-white hover:scale-105 transition">
+          <div className="shadow-lg rounded-2xl p-4 bg-white hover:scale-105 transition">
             <ShieldCheck className="w-11 h-11 bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-sm p-1 rounded-xl " />
             <div>
               <h3 className="font-semibold text-gray-800">
@@ -46,7 +46,7 @@ export default function WhyChoose() {
           </div>
 
           {/* Success Rate */}
-          <div className="shadow-xl rounded-2xl p-4 bg-white hover:scale-105 transition">
+          <div className="shadow-lg rounded-2xl p-4 bg-white hover:scale-105 transition">
             <TrendingUp className="w-11 h-11 bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-sm p-1 rounded-xl " />
             <div>
               <h3 className="font-semibold text-gray-800">

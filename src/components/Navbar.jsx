@@ -100,7 +100,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-white shadow-lg overflow-hidden transition-all duration-300 ${
+        className={`md:hidden bg-white/95 backdrop-blur-md   overflow-hidden transition-all duration-300 ${
           open ? "max-h-[28rem] py-5" : "max-h-0"
         }`}
       >
