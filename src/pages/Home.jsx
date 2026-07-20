@@ -13,37 +13,13 @@ export default function Hero() {
   const [loadedCount, setLoadedCount] = useState(0);
   const ready = loadedCount >= images.length;
 
-  // Preload every slide up front before showing the carousel
   useEffect(() => {
-    let cancelled = false;
+  const interval = setInterval(() => {
+    setIndex((prev) => (prev + 1) % images.length);
+  }, 4000);
 
-    images.forEach((src) => {
-      const img = new Image();
-      img.onload = () => {
-        if (!cancelled) setLoadedCount((c) => c + 1);
-      };
-      img.onerror = () => {
-        // Still count it so a broken image can't stall loading forever
-        if (!cancelled) setLoadedCount((c) => c + 1);
-      };
-      img.src = src;
-    });
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  // Auto slide (only once everything is loaded)
-  useEffect(() => {
-    if (!ready) return;
-
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [ready]);
+  return () => clearInterval(interval);
+}, []);
 
   const goPrev = () => {
     setIndex((prev) => (prev - 1 + images.length) % images.length);
@@ -58,16 +34,6 @@ export default function Hero() {
       id="home"
       className="relative h-screen overflow-hidden group bg-gradient-to-br from-teal-600 to-cyan-700"
     >
-      {/* Loading state — brand gradient + spinner, never white or black */}
-      {!ready && (
-        <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-teal-600 to-cyan-700">
-          <div className="w-12 h-12 rounded-full border-4 border-white/30 border-t-white animate-spin"></div>
-          <p className="text-white/90 text-sm font-medium tracking-wide">
-            Loading&hellip;
-          </p>
-        </div>
-      )}
-
       {/* Slider */}
       <div
         className="flex h-full transition-transform duration-1000 ease-in-out"

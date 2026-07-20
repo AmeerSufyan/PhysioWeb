@@ -20,7 +20,7 @@ export default function WhyChoose() {
         <div className="grid md:grid-cols-3  gap-8  ">
 
           {/* Advanced Physiotherapy */}
-          <div className="shadow-lg rounded-2xl p-4 bg-white hover:scale-105 transition">
+          <div className="shadow-lg rounded-2xl p-4 bg-white hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,0,0,0.10)] transition-all duration-300">
             <Cpu className="w-11 h-11 bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-sm p-1 rounded-xl " />
             <div>
               <h3 className="font-semibold text-gray-800">
@@ -33,7 +33,7 @@ export default function WhyChoose() {
           </div>
 
           {/* Qualified Staff */}
-          <div className="shadow-lg rounded-2xl p-4 bg-white hover:scale-105 transition">
+          <div className="shadow-lg rounded-2xl p-4 bg-white hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,0,0,0.10)] transition-all duration-300">
             <ShieldCheck className="w-11 h-11 bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-sm p-1 rounded-xl " />
             <div>
               <h3 className="font-semibold text-gray-800">
@@ -46,7 +46,7 @@ export default function WhyChoose() {
           </div>
 
           {/* Success Rate */}
-          <div className="shadow-lg rounded-2xl p-4 bg-white hover:scale-105 transition">
+          <div className="shadow-lg rounded-2xl p-4 bg-white hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,0,0,0.10)] transition-all duration-300">
             <TrendingUp className="w-11 h-11 bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-sm p-1 rounded-xl " />
             <div>
               <h3 className="font-semibold text-gray-800">
